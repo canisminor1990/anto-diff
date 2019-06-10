@@ -24,7 +24,7 @@
     "build": "npm run build:main && npm run build:renderer",
     "build:main": "ESLINT=none roadhog build",
     "build:renderer": "APP_ROOT=src/renderer ESLINT=none umi build",
-    "build:panel": "APP_ROOT=panel ESLINT=none umi build",
+    "build:panel": "APP_ROOT=panel ESLINT=none umi build && node scripts/panel.js",
     "pack": "npm run build && npm run rebuild && build",
     "pack:dir": "npm run build && npm run rebuild && build --dir",
     "pack:dirOnly": "build --dir",

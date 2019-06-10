@@ -5,8 +5,10 @@ import styled from 'styled-components';
 import { join } from 'path';
 
 const Panel = Collapse.Panel;
-const Sketch = require('../assets/sketch.png');
-const Logo = require('../assets/logo.png');
+const Sketch =
+  'https://raw.githubusercontent.com/canisminor1990/anto-diff/master/src/renderer/assets/sketch.png';
+const Logo =
+  'https://raw.githubusercontent.com/canisminor1990/anto-diff/master/src/renderer/assets/logo.png';
 
 const Nav = styled.div`
   padding: 0.5rem 2rem 0.5rem 1rem;
@@ -145,7 +147,7 @@ class app extends Component {
             {title}
             {name.replace('.png', '')}
           </p>
-          <img src={join(`/`, root, name)} />
+          <img src={`${root}/${name}`} />
         </ImgCase>
       );
     });
@@ -154,7 +156,13 @@ class app extends Component {
     return (
       <View>
         <Nav>
-          <img src={Logo} width="210px" />
+          <a
+            href="https://github.com/canisminor1990/anto-diff"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src={Logo} width="210px" />
+          </a>
         </Nav>
         <Preview>
           <FileView>

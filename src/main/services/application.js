@@ -5,6 +5,7 @@ import process from 'child_process';
 import fs from 'fs';
 import BlinkDiff from 'blink-diff';
 import { join } from 'path';
+import Panel from './panel.json';
 
 const home = require('os').homedir();
 const path = join(home, '.sketchdiff');
@@ -55,6 +56,9 @@ async function SketchDiff(event, data) {
   fs.mkdirSync(join(buildPath, 'diff'));
   const dataJs = `localStorage.setItem('preview', '${JSON.stringify(diffFiles)}');`;
   fs.writeFileSync(join(buildPath, 'data.js'), dataJs, 'utf-8');
+  fs.writeFileSync(join(buildPath, 'index.html'), Panel.html, 'utf-8');
+  fs.writeFileSync(join(buildPath, 'publicumi.js'), Panel.js, 'utf-8');
+  fs.writeFileSync(join(buildPath, 'publicumi.css'), Panel.css, 'utf-8');
   _.forEach(diffFiles.add, p => {
     fs.copyFileSync(join(newPath, p), join(buildPath, 'add', p));
   });
