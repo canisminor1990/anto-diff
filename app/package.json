@@ -1,13 +1,14 @@
 {
-  "name": "umi-example-electron",
+  "name": "anto-diff",
   "version": "1.0.0",
-  "description": "Yet another boilerplate for umi+dva+electron.",
+  "description": "Sketch diff tool.",
   "main": "dist/main/main.js",
   "author": {
-    "name": "chencheng",
-    "email": "sorrycc@gmail.com"
+    "name": "CanisMinor",
+    "email": "i@canisminor.cc"
   },
   "dependencies": {
+    "blink-diff": "^1.0.13",
     "electron-config": "^1.0.0",
     "electron-is": "^2.4.1",
     "electron-log": "^2.2.14"
