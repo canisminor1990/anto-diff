@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d2c3fa-c0c0-4a14-aefa-44ac3bf83e94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/anto-diff.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/.umirc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/assets/sketch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/assets/yay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/models/g.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/.umi/DvaContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/.umi/dva.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/.umi/history.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/.umi/polyfills.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/.umi/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/.umi/umi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/.umi/umiExports.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/document.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/pages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/public/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel/public/diff/odddd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/renderer/assets/sketch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/services/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/services/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/.umirc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/.umirc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,6 +27,7 @@
           <entry key="gitignore" value="2" />
           <entry key="js" value="35" />
           <entry key="json" value="14" />
+          <entry key="md" value="1" />
           <entry key="ts" value="2" />
         </counts>
       </usages-collector>
@@ -66,6 +36,7 @@
           <entry key="EJS" value="1" />
           <entry key="JSON" value="14" />
           <entry key="JavaScript" value="35" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="2" />
         </counts>
@@ -75,6 +46,7 @@
           <entry key="gitignore" value="46" />
           <entry key="js" value="4566" />
           <entry key="json" value="145" />
+          <entry key="md" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -82,6 +54,7 @@
           <entry key="JSON" value="145" />
           <entry key="JavaScript" value="4437" />
           <entry key="Less" value="129" />
+          <entry key="Markdown" value="12" />
           <entry key="PLAIN_TEXT" value="46" />
         </counts>
       </usages-collector>
@@ -105,7 +78,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/panel/pages/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -113,6 +86,18 @@
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -245,6 +230,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/panel/pages/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -395,12 +381,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560142722532</updated>
-      <workItem from="1560142723887" duration="24030000" />
+      <workItem from="1560142723887" duration="24083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24030000" />
+    <option name="totallyTimeSpent" value="24083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
@@ -408,12 +394,12 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960506" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.28096947" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.28096947" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -590,6 +576,16 @@
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
