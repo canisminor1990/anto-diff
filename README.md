@@ -5,6 +5,7 @@
 [![GitHub release](https://img.shields.io/github/release/canisminor1990/anto-diff.svg)](https://github.com/canisminor1990/anto-diff/releases) [![](https://img.shields.io/github/downloads/canisminor1990/anto-diff/total.svg)](https://github.com/canisminor1990/anto-diff/releases)
 
 解决设计书写设计变的烦恼 🥵，让开发拿到新设计稿不再手足无措 🤥
+
 Sketch Diff 工具，自动对比新旧两份设计文件并输出迭代修改清单，支持 Demo+
 
 ## 获取与安装
