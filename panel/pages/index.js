@@ -93,6 +93,7 @@ const Tag = styled.div`
 
 const ImgCase = styled.div`
   position: relative;
+  margin-bottom: 2rem;
   > img {
     max-width: 100%;
   }

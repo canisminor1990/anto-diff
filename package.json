@@ -1,11 +1,21 @@
 {
   "name": "anto-diff",
   "version": "1.0.0",
-  "description": "Sketch diff tool.",
+  "description": "Sketch diff tool",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canisminor1990/anto-diff.git"
+  },
   "author": {
     "name": "CanisMinor",
-    "email": "i@canisminor.cc"
+    "email": "i@canisminor.cc",
+    "url": "https://canisminor.cc/"
   },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/canisminor1990/anto-diff/issues"
+  },
+  "homepage": "https://github.com/canisminor1990/anto-diff",
   "build": {
     "files": [
       "./dist/**/*",
@@ -13,7 +23,9 @@
       "./node_modules/**/*"
     ],
     "appId": "com.canisminor.anto-diff",
-    "asar": false
+    "asar": false,
+    "productName": "Anto Diff",
+    "copyright": "Copyright © 2019 CanisMinor (倏昱)"
   },
   "scripts": {
     "start": "concurrently \"npm run dev:main\" \"electron app/dist/main/main\"",
