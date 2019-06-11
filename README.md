@@ -8,6 +8,8 @@
 
 Sketch Diff 工具，自动对比新旧两份设计文件并输出迭代修改清单，支持 Demo+
 
+<br />
+
 ## 获取与安装
 
 [<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/download.png" width="300"/>](https://github.com/canisminor1990/anto-diff/releases)
