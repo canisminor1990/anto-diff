@@ -10,20 +10,22 @@ Sketch Diff 工具，自动对比新旧两份设计文件并输出迭代修改�
 
 [<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/download.png" width="300"/>](https://github.com/canisminor1990/anto-diff/releases)
 
+- 语雀下载：https://www.yuque.com/canisminor/anto/antodiff
+
 <br />
 
 ## 使用指南
 
-下载并安装 **Anto Diff**
+#### 下载并安装 **Anto Diff**
 
 <img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p0.png" width="720"/>
 
-打开 **Anto Diff** 并拖入当前与历史设计 Sketch 文件，单击开始比对
+#### 打开 **Anto Diff** 并拖入当前与历史设计 Sketch 文件，单击开始比对
 
 <img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p1.png" width="720"/>
 <img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p3.png" width="720"/>
 
-浏览或下载分析报告
+#### 浏览或下载分析报告
 
 <img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p4.png" width="720"/>
 
