@@ -14,7 +14,7 @@ Sketch Diff 工具，自动对比新旧两份设计文件并输出迭代修改�
 
 ## 使用指南
 
-施工中...
+![](https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p1.png)
 
 <br />
 
