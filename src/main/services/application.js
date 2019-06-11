@@ -1,11 +1,12 @@
-import { create, getPath } from './window';
-import { ipcMain as ipc } from 'electron';
+import { ipcMain as ipc, shell } from 'electron';
 import _ from 'lodash';
 import process from 'child_process';
 import fs from 'fs';
 import BlinkDiff from 'blink-diff';
 import { join } from 'path';
+import archiver from 'archiver';
 import Panel from './panel.json';
+import { create, getPath } from './window';
 
 const home = require('os').homedir();
 const path = join(home, '.sketchdiff');
@@ -16,7 +17,14 @@ const buildPath = join(path, 'dist');
 const sketch = '/Applications/Sketch.app/Contents/Resources/sketchtool/bin/sketchtool';
 
 export function init() {
-  const win = create({ width: 800, height: 600 });
+  const win = create({
+    title: 'Anto Diff',
+    width: 700,
+    height: 330,
+    resizable: false,
+    maximizable: false,
+    backgroundColor: '#222222',
+  });
   win.loadURL(getPath());
   ipc.on('sketch', (event, data) => {
     SketchDiff(event, data);
@@ -34,8 +42,9 @@ async function SketchDiff(event, data) {
   exportFile(newFile, newPath);
   exportFile(oldFile, oldPath);
   const newFiles = fs.readdirSync(newPath);
+  event.sender.send('step-two', '1/2');
   const oldFiles = fs.readdirSync(oldPath);
-  event.sender.send('step-two', 2);
+  event.sender.send('step-two', '2/2');
   // 对比图片
   const diffFiles = diff(newFiles, oldFiles);
   fs.mkdirSync(diffPath);
@@ -69,6 +78,17 @@ async function SketchDiff(event, data) {
     fs.copyFileSync(join(diffPath, p), join(buildPath, 'diff', p));
   });
   event.sender.send('step-five', 5);
+  const name = `[改动清单] ${newName.replace('.sketch', '')}.zip`;
+  const output = fs.createWriteStream(join(path, name));
+  const archive = archiver('zip');
+  archive.on('error', err => {
+    throw err;
+  });
+  archive.pipe(output);
+  archive.directory(buildPath, false);
+  archive.finalize();
+  event.sender.send('step-six', join(path, name));
+  console.log(shell.openItem(join(buildPath, 'index.html')));
 }
 
 // 方法

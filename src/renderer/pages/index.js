@@ -126,12 +126,20 @@ const ProgressView = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.75);
 `;
 
 class app extends Component {
   state = {
     oldFile: false,
     newFile: false,
+    start: false,
     progress: 0,
     progressDesc: '开始比对...',
   };
@@ -148,7 +156,7 @@ class app extends Component {
       console.log(arg);
       this.setState({
         progress: 10,
-        progressDesc: '正在解析Sketch文件...',
+        progressDesc: `正在解析Sketch文件 (${arg})...`,
       });
     });
     ipc.on('step-three', (event, arg) => {
@@ -162,8 +170,22 @@ class app extends Component {
     ipc.on('step-four', (event, arg) => {
       console.log(arg);
       this.setState({
-        progress: 100,
+        progress: 90,
         progressDesc: '正在生成比对结果...',
+      });
+    });
+    ipc.on('step-five', (event, arg) => {
+      console.log(arg);
+      this.setState({
+        progress: 95,
+        progressDesc: '正在打包资源...',
+      });
+    });
+    ipc.on('step-five', (event, arg) => {
+      console.log(arg);
+      this.setState({
+        progress: 100,
+        progressDesc: '分析完成',
       });
     });
   }
@@ -212,14 +234,18 @@ class app extends Component {
 
   ProgressMask = () => (
     <ProgressView>
-      <Progress percent={this.state.progress} status="active" />
-      <p>{this.state.progressDesc}</p>
+      <Progress
+        percent={this.state.progress}
+        status={this.state.progress < 100 ? 'active' : 'success'}
+      />
+      <Title>{this.state.progressDesc}</Title>
     </ProgressView>
   );
 
   render() {
     return (
       <View>
+        {this.state.start ? <this.ProgressMask /> : null}
         <Nav>
           <img src={Logo} width="210px" />
           {this.state.newFile && this.state.oldFile ? (
@@ -243,12 +269,12 @@ class app extends Component {
             {this.state.oldFile ? <this.OldFile /> : <this.OldDrag />}
           </DraggerView>
         </UploadView>
-        <this.ProgressMask />
       </View>
     );
   }
 
   handleDiff = () => {
+    this.setState({ start: true });
     const files = {
       newName: this.state.newFile.name,
       oldName: this.state.oldFile.name,

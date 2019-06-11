@@ -16,8 +16,8 @@
     "asar": false
   },
   "scripts": {
-    "start": "electron app/dist/main/main",
-    "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
+    "start": "concurrently \"npm run dev:main\" \"electron app/dist/main/main\"",
+    "dev": "npm run dev:renderer",
     "dev:main": "ESLINT=none BROWSER=none COMPRESS=none roadhog build -w",
     "dev:renderer": "APP_ROOT=src/renderer BROWSER=none ESLINT=none umi dev",
     "dev:panel": "APP_ROOT=panel PORT=7777 ESLINT=none umi dev",
@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "<=7.0.0-beta.55",
+    "archiver": "^3.0.0",
     "blink-diff": "^1.0.13",
     "concurrently": "^3.6.1",
     "electron": "^2.0.2",
@@ -74,6 +75,7 @@
     "jszip": "^3.1.5",
     "lint-staged": "^8.2.0",
     "lodash": "^4.17.11",
+    "moment": "^2.24.0",
     "polished": "^2.3.1",
     "pre-commit": "^1.2.2",
     "prettier": "^1.14.3",

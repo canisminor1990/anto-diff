@@ -2,7 +2,6 @@ import { connect } from 'dva';
 import { Component } from 'react';
 import { BackTop, Icon, Collapse } from 'antd';
 import styled from 'styled-components';
-import { join } from 'path';
 
 const Panel = Collapse.Panel;
 const Sketch =
