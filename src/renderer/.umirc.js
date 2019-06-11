@@ -2,8 +2,9 @@ import { join } from 'path';
 import slash from 'slash';
 
 export default {
-	publicPath: './static/',
 	outputPath: '../../app/dist/renderer',
+	publicPath          : './public',
+	history         : "hash",
 	theme     : {
 		'@primary-color'     : '#1964ff',
 		'@white'             : '#000',

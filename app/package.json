@@ -8,9 +8,12 @@
     "email": "i@canisminor.cc"
   },
   "dependencies": {
+    "@babel/runtime": "<=7.0.0-beta.55",
+    "archiver": "^3.0.0",
     "blink-diff": "^1.0.13",
     "electron-config": "^1.0.0",
     "electron-is": "^2.4.1",
-    "electron-log": "^2.2.14"
+    "electron-log": "^2.2.14",
+    "lodash": "^4.17.11"
   }
 }

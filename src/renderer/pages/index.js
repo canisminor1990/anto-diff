@@ -1,11 +1,11 @@
 import { connect } from 'dva';
-import { Upload, Button, Progress, message } from 'antd';
+import { Upload, Button, Progress } from 'antd';
 import { Component } from 'react';
 import styled from 'styled-components';
 import { ipcRenderer as ipc } from 'electron';
 
-const Sketch = require('../assets/sketch.png');
-const Logo = require('../assets/logo.png');
+const Sketch = './sketch.png';
+const Logo = './logo.png';
 
 // ===================================================
 // Styled
