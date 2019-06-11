@@ -16,16 +16,18 @@ Sketch Diff 工具，自动对比新旧两份设计文件并输出迭代修改�
 
 下载并安装 **Anto Diff**
 
-<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p0.png" width="1024"/>
+<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p0.png" width="720"/>
 
 打开 **Anto Diff** 并拖入当前与历史设计 Sketch 文件，单击开始比对
 
-<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p1.png" width="1024"/>
-<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p3.png" width="1024"/>
+<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p1.png" width="720"/>
+<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p3.png" width="720"/>
 
 浏览或下载分析报告
 
-<img src="(https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p4.png" width="1024"/>
+<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p4.png" width="720"/>
+
+<img src="https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/p5.png" width="720"/>
 
 <br />
 
