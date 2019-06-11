@@ -1,4 +1,4 @@
-import { ipcMain as ipc, shell } from 'electron';
+import { ipcMain as ipc, shell, dialog } from 'electron';
 import _ from 'lodash';
 import process from 'child_process';
 import fs from 'fs';
@@ -20,7 +20,7 @@ export function init() {
   const win = create({
     title: 'Anto Diff',
     width: 700,
-    height: 330,
+    height: 360,
     resizable: false,
     maximizable: false,
     backgroundColor: '#222222',
@@ -28,6 +28,21 @@ export function init() {
   win.loadURL(getPath());
   ipc.on('sketch', (event, data) => {
     SketchDiff(event, data);
+  });
+  ipc.on('download', (event, name) => {
+    console.log(name);
+    const savePath = dialog.showSaveDialog({
+      title: '输出报告至',
+      defaultPath: `[改动清单] ${name.replace('.sketch', '')}.zip`,
+    });
+    fs.copyFileSync(join(path, 'dist.zip'), savePath);
+    shell.showItemInFolder(savePath);
+  });
+  ipc.on('link', () => {
+    shell.openExternal('https://github.com/canisminor1990/anto-diff');
+  });
+  ipc.on('my-link', () => {
+    shell.openExternal('https://github.com/canisminor1990');
   });
 }
 
@@ -78,7 +93,7 @@ async function SketchDiff(event, data) {
     fs.copyFileSync(join(diffPath, p), join(buildPath, 'diff', p));
   });
   event.sender.send('step-five', 5);
-  const name = `[改动清单] ${newName.replace('.sketch', '')}.zip`;
+  const name = 'dist.zip';
   const output = fs.createWriteStream(join(path, name));
   const archive = archiver('zip');
   archive.on('error', err => {
@@ -87,7 +102,7 @@ async function SketchDiff(event, data) {
   archive.pipe(output);
   archive.directory(buildPath, false);
   archive.finalize();
-  event.sender.send('step-six', join(path, name));
+  event.sender.send('step-six', 6);
   console.log(shell.openItem(join(buildPath, 'index.html')));
 }
 

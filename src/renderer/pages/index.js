@@ -7,6 +7,10 @@ import { ipcRenderer as ipc } from 'electron';
 const Sketch = require('../assets/sketch.png');
 const Logo = require('../assets/logo.png');
 
+// ===================================================
+// Styled
+// ===================================================
+
 const Nav = styled.div`
   padding: 0.5rem 2rem 0.5rem 1rem;
   background: #222;
@@ -19,6 +23,11 @@ const Nav = styled.div`
 const View = styled.div`
   background: #222;
   height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  user-select: none;
 `;
 
 const UploadView = styled.div`
@@ -125,7 +134,7 @@ const ProgressView = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 4rem 4rem 2rem 4rem;
   position: fixed;
   left: 0;
   top: 0;
@@ -134,6 +143,29 @@ const ProgressView = styled.div`
   z-index: 100;
   background: rgba(0, 0, 0, 0.75);
 `;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  > button {
+    margin: 0.5rem;
+  }
+`;
+
+const Copyright = styled.a`
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+  margin-top: -0.5rem;
+  display: block;
+`;
+
+// ===================================================
+// Render
+// ===================================================
 
 class app extends Component {
   state = {
@@ -239,6 +271,12 @@ class app extends Component {
         status={this.state.progress < 100 ? 'active' : 'success'}
       />
       <Title>{this.state.progressDesc}</Title>
+      <ButtonGroup>
+        <Button onClick={this.onClose}>关闭</Button>
+        <Button type="primary" onClick={this.onDownload}>
+          下载报告
+        </Button>
+      </ButtonGroup>
     </ProgressView>
   );
 
@@ -247,7 +285,9 @@ class app extends Component {
       <View>
         {this.state.start ? <this.ProgressMask /> : null}
         <Nav>
-          <img src={Logo} width="210px" />
+          <a onClick={this.onLink}>
+            <img src={Logo} width="210px" />
+          </a>
           {this.state.newFile && this.state.oldFile ? (
             <Button type="primary" onClick={this.handleDiff}>
               开始比对
@@ -269,6 +309,7 @@ class app extends Component {
             {this.state.oldFile ? <this.OldFile /> : <this.OldDrag />}
           </DraggerView>
         </UploadView>
+        <Copyright onClick={this.onMyLink}>Copyright © 2019 CanisMinor (倏昱)</Copyright>
       </View>
     );
   }
@@ -283,6 +324,28 @@ class app extends Component {
     };
     console.log(files);
     ipc.send('sketch', files);
+  };
+
+  onClose = () => {
+    this.setState({
+      oldFile: false,
+      newFile: false,
+      start: false,
+      progress: 0,
+      progressDesc: '开始比对...',
+    });
+  };
+
+  onDownload = () => {
+    ipc.send('download', this.state.newFile.name);
+  };
+
+  onLink = () => {
+    ipc.send('link', null);
+  };
+
+  onMyLink = () => {
+    ipc.send('my-link', null);
   };
 
   onOldFileChange = info => {

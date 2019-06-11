@@ -2,12 +2,20 @@ import { join } from 'path';
 import slash from 'slash';
 
 export default {
-	publicPath          : './static/',
-	outputPath          : '../../app/dist/renderer',
-	theme               : {
-		'@primary-color': '#1964ff'
+	publicPath: './static/',
+	outputPath: '../../app/dist/renderer',
+	theme     : {
+		'@primary-color'     : '#1964ff',
+		'@white'             : '#000',
+		'@black'             : '#fff',
+		'@normal-color'      : '#999',
+		'@body-background'   : '#222',
+		'@border-color-base' : '#333',
+		'@border-color-split': '#333',
+		'@btn-default-bg'    : 'rgba(255,255,255,.05)',
+		'@btn-default-border': 'rgba(255,255,255,.4)'
 	},
-	plugins             : [
+	plugins   : [
 		[
 			'umi-plugin-react', {
 			dva : {
