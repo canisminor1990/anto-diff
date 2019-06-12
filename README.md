@@ -2,7 +2,7 @@
 
 ![banner.png](https://raw.githubusercontent.com/canisminor1990/anto-diff/master/docs/banner.png)
 
-[![GitHub release](https://img.shields.io/github/release/canisminor1990/anto-diff.svg)](https://github.com/canisminor1990/anto-diff/releases) [![](https://img.shields.io/github/downloads/canisminor1990/anto-diff/total.svg)](https://github.com/canisminor1990/anto-diff/releases)
+[![GitHub release](https://img.shields.io/github/release/canisminor1990/anto-diff.svg)](https://github.com/canisminor1990/anto-diff/releases) 
 
 解决设计书写设计变的烦恼 🥵，让开发拿到新设计稿不再手足无措 🤥
 
